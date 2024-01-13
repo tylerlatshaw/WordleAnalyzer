@@ -1,4 +1,4 @@
-import FormInput from "@/components/input-form";
+import FormHandler from "@/components/form-handler";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -15,12 +15,12 @@ export default function Page() {
 
         <div className="flex flex-row items-center justify-center w-full my-8">
           <div className="flex flex-col items-center justify-center">
-            <FormInput />
-            <FormInput />
-            <FormInput />
-            <FormInput />
-            <FormInput />
-            <FormInput />
+            <FormHandler />
+            <FormHandler />
+            <FormHandler />
+            <FormHandler />
+            <FormHandler />
+            <FormHandler />
           </div>
         </div>
 

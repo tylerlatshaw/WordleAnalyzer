@@ -2,7 +2,7 @@
 
 import { Twirl as Hamburger } from "hamburger-react";
 import { useState } from "react";
-import { navigationLinks } from "./navigation-links";
+import { navigationLinks } from "../lib/navigation-links";
 
 import HomeIcon from "@mui/icons-material/Home";
 import WorkIcon from "@mui/icons-material/Work";

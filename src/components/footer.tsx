@@ -1,20 +1,41 @@
 "use client";
 
 import Link from "next/link";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import MailOutlineIcon from "@mui/icons-material/MailOutline";
-import FormFooterContact from "./footer-contact";
-import { navigationLinks, supplementalLinks } from "./navigation-links";
+import SvgIcon from "@mui/icons-material/Home";
+import { footerSocialLinks, navigationLinks, supplementalLinks } from "../lib/navigation-links";
 
 export default function Footer() {
 
+    const linkClasses = "w-fit text-blue-300 no-underline hover:text-green-500";
+
+    const socialLinks = footerSocialLinks.map((link) =>
+        <div key={link.display} className="grid justify-items-center">
+            <div className="mt-3">
+                <a href={link.link} className="group block" target="_blank">
+                    <div className="flex items-center">
+                        <SvgIcon component={link.icon} className="group-hover:text-green-500 text-3xl md:text-2xl" />&nbsp;
+                        <span className="desktop-only group-hover:text-green-500">{link.display}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    );
+
     const primaryLinks = navigationLinks.map((menuItem) =>
-        <Link key={menuItem.display} href={menuItem.link} className="w-fit text-blue-300 no-underline hover:text-green-500 hover:text-underline transform hover:scale-125 duration-300 ease-in-out">{menuItem.display}</Link>
+        <Link key={menuItem.display} href={menuItem.link} className={linkClasses}>{menuItem.display}</Link>
     );
 
     const secondaryLinks = supplementalLinks.map((menuItem) =>
-        <Link key={menuItem.display} href={menuItem.link} className="w-fit text-blue-300 no-underline hover:text-green-500 hover:text-underline transform hover:scale-125 duration-300 ease-in-out">{menuItem.display}</Link>
+        <Link key={menuItem.display} href={menuItem.link} className={linkClasses}>{menuItem.display}</Link>
     );
+
+    const copyright = <>
+        <div className="w-full pt-6 text-md fade-in text-gray-400">
+            <div className="text-center" id="copyright">
+                &copy; {new Date().getFullYear()} <a href="http://tylerlatshaw.com" target="_blank" className="hover:text-sky-600">Tyler J. Latshaw</a>. All rights reserved.
+            </div>
+        </div>
+    </>;
 
     return (
         <>
@@ -23,30 +44,14 @@ export default function Footer() {
                 <div className="container mx-auto">
                     <div className="grid md:grid-cols-3">
                         <div className="grid grid-col content-start w-fit mx-auto py-6">
-                            <div className="m-auto">
+                            <div className="m-auto mb-3">
                                 <Link className="grid items-center text-white hover:text-green-500 no-underline hover:no-underline font-bold text-3xl sm:text-3xl" href="/">
                                     <span className="logo-full">Wordle Analyzer</span>
                                 </Link>
                             </div>
-                            <div className="grid justify-items-center">
-                                <div className="mt-6">
-                                    <a href="mailto:tyler@tylerlatshaw.com" className="group block" target="_blank">
-                                        <div className="flex items-center">
-                                            <MailOutlineIcon className="group-hover:text-green-500" />&nbsp;
-                                            <h3 className="text-white group-hover:text-green-500">tyler@tylerlatshaw.com</h3>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="grid justify-items-center">
-                                <div className="mt-3">
-                                    <a href="https://www.linkedin.com/in/tylerlatshaw/" className="group block" target="_blank">
-                                        <div className="flex items-center">
-                                            <LinkedInIcon className="group-hover:text-green-500" />&nbsp;
-                                            <h3 className="text-white group-hover:text-green-500">Connect With Me On LinkedIn</h3>
-                                        </div>
-                                    </a>
-                                </div>
+
+                            <div className="flex flex-row md:flex-col w-full justify-center gap-3 md:gap-0 mt-2 md:mt-0">
+                                {socialLinks}
                             </div>
                         </div>
                         <div className="w-full md:border-x-2 border-slate-700 py-6">
@@ -65,14 +70,9 @@ export default function Footer() {
                             <div className="w-full text-center">
                                 <span className="font-medium">Send Me a Message</span>
                             </div>
-                            {/* <FormFooterContact /> */}
                         </div>
                     </div>
-                    <div className="w-full pt-6 text-md fade-in text-gray-400">
-                        <div className="text-center" id="copyright">
-                            &copy; {new Date().getFullYear()} Tyler J. Latshaw. All rights reserved.
-                        </div>
-                    </div>
+                    {copyright}
                 </div>
             </div>
         </>
