@@ -1,3 +1,4 @@
+import FormInput from "@/components/input-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -5,34 +6,22 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+
   return <>
     <div className="h-full mx-4 md:mx-0">
-      <div className="main-content container w-full mx-auto flex flex-wrap mx-auto pt-28 md:pt-36 pb-16 md:pb-40">
+      <div className="main-content container w-full mx-auto flex flex-wrap mx-auto pt-28 md:pt-36 pb-16 md:pb-24">
 
         <h1 className="w-full pb-8 text-3xl text-black md:text-4xl font-bold text-center">Wordle Word Analyzer</h1>
 
-        <div className="w-1/3 flex mx-auto space-y-2 bg-yellow-500">
-
-          <div className="w-full flex space-x-2">
-
-            <div className="w-1/5 aspect-square bg-red-500">
-              <input className="border-2 border-gray-300 uppercase text-center w-full aspect-square" type="text" maxLength={1} />
-            </div>
-            <div className="w-1/5 aspect-square bg-red-500">
-              <input className="border-2 border-gray-300 uppercase text-center w-full aspect-square" type="text" maxLength={1} />
-            </div>
-            <div className="w-1/5 aspect-square bg-red-500">
-              <input className="border-2 border-gray-300 uppercase text-center w-full aspect-square" type="text" maxLength={1} />
-            </div>
-            <div className="w-1/5 aspect-square bg-red-500">
-              <input className="border-2 border-gray-300 uppercase text-center w-full aspect-square" type="text" maxLength={1} />
-            </div>
-            <div className="w-1/5 aspect-square bg-red-500">
-              <input className="border-2 border-gray-300 uppercase text-center w-full aspect-square" type="text" maxLength={1} />
-            </div>
-
+        <div className="flex flex-row items-center justify-center w-full my-8">
+          <div className="flex flex-col items-center justify-center">
+            <FormInput />
+            <FormInput />
+            <FormInput />
+            <FormInput />
+            <FormInput />
+            <FormInput />
           </div>
-
         </div>
 
       </div>

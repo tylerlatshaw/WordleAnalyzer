@@ -77,7 +77,7 @@ export default function Navigation() {
 
     return (
         <>
-            <nav className="fixed md:absolute w-full right-0 top-0 z-30 bg-gray-900">
+            <nav className="fixed md:absolute w-full right-0 top-0 z-30 bg-gray-900 text-white">
                 <div className="container mx-auto p-3">
                     <div className="flex justify-between">
 

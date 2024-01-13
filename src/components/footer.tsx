@@ -19,7 +19,7 @@ export default function Footer() {
     return (
         <>
             <div className="h-2 bg-gradient-to-r from-green-500 via-stone-500 to-yellow-400"></div>
-            <div className="w-full pb-8 md:py-8 px-3 bg-gray-900">
+            <div className="w-full pb-8 md:py-8 px-3 bg-gray-900 text-white">
                 <div className="container mx-auto">
                     <div className="grid md:grid-cols-3">
                         <div className="grid grid-col content-start w-fit mx-auto py-6">
@@ -70,7 +70,7 @@ export default function Footer() {
                     </div>
                     <div className="w-full pt-6 text-md fade-in text-gray-400">
                         <div className="text-center" id="copyright">
-                            &copy; {new Date().getFullYear()} Tyler J. Latshaw. All rights reserved. <br className="inline md:hidden" /><span className="hidden md:inline">|</span> Website designed by Tyler Latshaw based on <a href="https://github.com/tailwindtoolbox" className="hover:text-slate-400" target="_blank">Tailwind Toolbox</a>.
+                            &copy; {new Date().getFullYear()} Tyler J. Latshaw. All rights reserved.
                         </div>
                     </div>
                 </div>
