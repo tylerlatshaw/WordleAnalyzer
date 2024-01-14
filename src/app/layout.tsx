@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navigation from "@/components/navigation";
-import Footer from "@/components/footer";
+import Navigation from "./../components/navigation";
+import Footer from "./../components/footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://wordle.tylerlatshaw.com/"),

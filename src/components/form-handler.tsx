@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { splitWord } from "./../utilities/word-processing";
 
-import type { classColorState, inputState, letterResponseType } from "@/lib/type-library";
+import type { classColorState, inputState, letterResponseType } from "./../lib/type-library";
 
 export default function FormHandler() {
     const [word, setWord] = useState("");

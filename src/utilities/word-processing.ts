@@ -1,6 +1,6 @@
 "use client";
 
-import { letterResponseType } from "@/lib/type-library";
+import { letterResponseType } from "./../lib/type-library";
 
 export function splitWord(word: string) {
     const letterResponse: letterResponseType[] = [];
