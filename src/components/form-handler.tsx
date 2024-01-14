@@ -6,9 +6,10 @@ import { Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { splitWord } from "./../utilities/word-processing";
 
-import type { classColorState, inputState, letterResponseType } from "./../lib/type-library";
+import type { classColorState, formHandlePropsType, inputState, letterResponseType } from "./../lib/type-library";
 
-export default function FormHandler() {
+// eslint-disable-next-line no-unused-vars
+export default function FormHandler(props: formHandlePropsType) {
     const [word, setWord] = useState("");
     const [inputState, setInputState] = useState<inputState>("input");
     const [letterResponse, setLetterResponse] = useState<letterResponseType[]>([]);
@@ -18,6 +19,9 @@ export default function FormHandler() {
         if (word.length === 5) {
             setLetterResponse(splitWord(word));
             setInputState("button");
+            props.messageState.setMessage("Click each letter to set if you were correct");
+        } else {
+            props.messageState.setMessage("Please enter enough letters");
         }
     }
 
@@ -58,7 +62,24 @@ export default function FormHandler() {
     function handleButtonSubmit() {
         if (!letterResponse.some(letter => letter.response === "unset")) {
             setInputState("readOnly");
+            calculateWin();
+        } else {
+            props.messageState.setMessage("Please set all letters first");
         }
+    }
+
+    function calculateWin() {
+        if (letterResponse.some(letter => letter.response === "incorrect" || letter.response === "misplaced")) { //Not a win yet
+            if (props.wordCountState.wordCount < 6) {
+                props.messageState.setMessage("Please enter another word");
+                props.wordCountState.setWordCount(props.wordCountState.wordCount + 1);
+            } else {
+                props.messageState.setMessage("Sorry, you lost");
+            }
+        } else {
+            props.messageState.setMessage("You won in " + props.wordCountState.wordCount + "!");
+        }
+
     }
 
     if (inputState === "input") {
