@@ -32,7 +32,7 @@ export default function Footer() {
     const copyright = <>
         <div className="w-full pt-6 text-md fade-in text-gray-400">
             <div className="text-center" id="copyright">
-                &copy; {new Date().getFullYear()} <a href="http://tylerlatshaw.com" target="_blank" className="hover:text-sky-600">Tyler J. Latshaw</a>. All rights reserved.
+                &copy; {new Date().getFullYear()} <a href="http://tylerlatshaw.com" target="_blank" className="hover:text-green-500">Tyler J. Latshaw</a>. All rights reserved.
             </div>
         </div>
     </>;

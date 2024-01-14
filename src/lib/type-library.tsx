@@ -15,6 +15,5 @@ export type classColorState = "bg-none" | "bg-w-green" | "bg-w-yellow" | "bg-w-g
 export type letterResponseType = {
     index: number,
     letter: string,
-    response: letterResponseState | null,
-    classColor: classColorState
+    response: letterResponseState | null
 }
