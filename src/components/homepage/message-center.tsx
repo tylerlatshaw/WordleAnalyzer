@@ -1,6 +1,6 @@
 "use client";
 
-import type { messageParamType } from "./../lib/type-library";
+import type { messageParamType } from "../../lib/type-library";
 
 // eslint-disable-next-line no-unused-vars
 export default function MessageCenter({ message, setMessage }: messageParamType) {

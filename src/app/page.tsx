@@ -2,9 +2,9 @@
 
 import { Metadata } from "next";
 import { useState } from "react";
-import FormHandler from "./../components/form-handler";
-import MessageCenter from "./../components/message-center";
-import EmptyInput from "@/components/empty-input";
+import FormHandler from "../components/homepage/form-handler";
+import MessageCenter from "../components/homepage/message-center";
+import EmptyInput from "../components/homepage/empty-input";
 import { gameState } from "@/lib/type-library";
 
 export const metadata: Metadata = {

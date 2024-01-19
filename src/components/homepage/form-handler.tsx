@@ -4,9 +4,9 @@ import { useState } from "react";
 import OtpInput from "react-otp-input";
 import { Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
-import { splitWord } from "./../utilities/word-processing";
+import { splitWord } from "../../utilities/word-processing";
 
-import type { classColorState, formHandlePropsType, inputState, letterResponseType } from "./../lib/type-library";
+import type { classColorState, formHandlePropsType, inputState, letterResponseType } from "../../lib/type-library";
 
 // eslint-disable-next-line no-unused-vars
 export default function FormHandler(props: formHandlePropsType) {

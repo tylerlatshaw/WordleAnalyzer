@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import SvgIcon from "@mui/icons-material/Home";
-import { footerSocialLinks, navigationLinks, supplementalLinks } from "../lib/navigation-links";
+import { footerSocialLinks, navigationLinks, supplementalLinks } from "../../lib/navigation-links";
 
 export default function Footer() {
 
