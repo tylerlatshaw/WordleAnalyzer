@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import { Metadata } from "next/types";
 
 export const metadata: Metadata = {
@@ -6,9 +6,9 @@ export const metadata: Metadata = {
 };
 
 const fetchFromNotion = async () => {
-    const {data} = await axios.get("/api/get-all-words");
+    // const {data} = await axios.get("/api/get-all-words");
 
-    return JSON.parse(data);
+    // return JSON.parse(data);
 };
 
 export default async function Page() {
@@ -23,7 +23,7 @@ export default async function Page() {
 
                 <div className="flex flex-row items-center justify-center w-full my-8">
                     {
-                        data
+                        // data
                     }
                 </div>
 
