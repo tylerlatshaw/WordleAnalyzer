@@ -83,16 +83,16 @@ export default function FormHandler(props: formHandlePropsType) {
     }
 
     if (inputState === "input") {
-        return <div className="flex flex-row">
+        return <div className="otp-container flex flex-row">
             <OtpInput
                 value={word}
                 onChange={setWord}
                 numInputs={5}
                 renderInput={(props) => <input {...props} />}
                 containerStyle={"text-5xl"}
-                inputStyle={"w-12 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase"}
+                inputStyle={"w-16 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase"}
             />
-            <Button className="w-12 h-16 m-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleInputSubmit(); }}>
+            <Button className="w-16 h-16 mx-4 my-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleInputSubmit(); }}>
                 <CheckIcon />
             </Button>
         </div>;
@@ -100,14 +100,14 @@ export default function FormHandler(props: formHandlePropsType) {
         return <div className="flex flex-row items-center">
             {
                 letterResponse.map((value) => (
-                    <div key={value.index} className="w-12 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase text-black text-5xl">
-                        <button className={"w-full h-full m-0 p-0 uppercase " + backgroundClass[value.index]} value={value.index} onClick={() => { handleButtonClick(value.index); }}>
+                    <div key={value.index} className="w-16 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase text-black text-5xl">
+                        <button className={"w-full h-full m-0 p-0 px-1 uppercase " + backgroundClass[value.index]} value={value.index} onClick={() => { handleButtonClick(value.index); }}>
                             {value.letter}
                         </button>
                     </div>
                 ))
             }
-            <Button className="w-12 h-16 m-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleButtonSubmit(); }}>
+            <Button className="w-16 h-16 mx-4 my-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleButtonSubmit(); }}>
                 <CheckIcon />
             </Button>
         </div>;
@@ -115,14 +115,14 @@ export default function FormHandler(props: formHandlePropsType) {
         return <div className="flex flex-row items-center">
             {
                 letterResponse.map((value) => (
-                    <div key={value.index} className="w-12 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase text-black text-5xl">
-                        <div className={"w-full h-full m-0 p-0 flex items-center justify-center uppercase " + backgroundClass[value.index]}>
+                    <div key={value.index} className="w-16 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase text-black text-5xl">
+                        <div className={"w-full h-full m-0 p-0 px-1 flex items-center justify-center uppercase " + backgroundClass[value.index]}>
                             {value.letter}
                         </div>
                     </div>
                 ))
             }
-            <div className="w-12 h-16 mx-4 my-2"></div>
+            <div className="w-16 h-16 mx-4 my-2"></div>
         </div>;
     }
 }

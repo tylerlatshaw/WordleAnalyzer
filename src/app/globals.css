@@ -119,3 +119,7 @@ input:-webkit-autofill:active {
 /*****
 /*******************************/
 
+.otp-container input {
+    width: 4rem;
+    min-width: 4rem;
+}
