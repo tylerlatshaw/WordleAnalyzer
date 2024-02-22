@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 import { splitWord } from "../../utilities/word-processing";
 
-import type { classColorState, formHandlePropsType, inputState, letterResponseType } from "../../lib/type-library";
+import type { classColorState, formHandlePropsType, inputState, letterResponseType } from "../../app/lib/type-library";
 
 // eslint-disable-next-line no-unused-vars
 export default function FormHandler(props: formHandlePropsType) {
@@ -92,7 +92,7 @@ export default function FormHandler(props: formHandlePropsType) {
                 containerStyle={"text-5xl"}
                 inputStyle={"w-16 h-16 m-2 border-2 border-gray-400 rounded-sm uppercase"}
             />
-            <Button className="w-16 h-16 mx-4 my-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleInputSubmit(); }}>
+            <Button className="w-12 h-16 m-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleInputSubmit(); }}>
                 <CheckIcon />
             </Button>
         </div>;
@@ -107,7 +107,7 @@ export default function FormHandler(props: formHandlePropsType) {
                     </div>
                 ))
             }
-            <Button className="w-16 h-16 mx-4 my-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleButtonSubmit(); }}>
+            <Button className="w-12 h-16 m-2 rounded-full bg-green-500 hover:bg-green-700 text-white" onClick={() => { handleButtonSubmit(); }}>
                 <CheckIcon />
             </Button>
         </div>;
@@ -122,7 +122,7 @@ export default function FormHandler(props: formHandlePropsType) {
                     </div>
                 ))
             }
-            <div className="w-16 h-16 mx-4 my-2"></div>
+            <div className="w-16 h-16 m-2"></div>
         </div>;
     }
 }
