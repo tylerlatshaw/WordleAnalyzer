@@ -4,7 +4,7 @@ import { useState } from "react";
 import FormHandler from "../components/homepage/form-handler";
 import MessageCenter from "../components/homepage/message-center";
 import EmptyInput from "../components/homepage/empty-input";
-import { gameState } from "@/lib/type-library";
+import { gameState } from "@/app/lib/type-library";
 
 export default function Page() {
   const [message, setMessage] = useState("Please enter a word");

@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Animated Logo](https://tylerlatshaw.com/static/gradient-logo-animated.svg  "Animated Logo")](https://.tylerlatshaw.com/  "Animated Logo")
 
-## Getting Started
+## Technology Used
 
-First, run the development server:
+#### Backend:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<a href="https://www.npmjs.com/package/next" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.next&logo=npm&label=NextJS&color=red&style=for-the-badge" alt="Next Badge">
+</a>
+<a href="https://www.npmjs.com/package/react" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.react&logo=react&label=React&color=lightblue&style=for-the-badge" alt="React Badge">
+</a>
+<a href="https://www.npmjs.com/package/typescript" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.devDependencies.typescript&logo=typescript&logoColor=blue&label=TypeScript&color=blue&style=for-the-badge" alt="TypeScript Badge">
+</a>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Design:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<a href="https://www.npmjs.com/package/tailwindcss" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.tailwindcss&logo=tailwindcss&label=Tailwind&style=for-the-badge" alt="Tailwind Badge">
+</a>
+<a href="https://www.npmjs.com/package/@mui/icons-material" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies%5B%22%40mui%2Ficons-material%22%5D&logo=mui&label=Material%20Icons&color=blue&style=for-the-badge" alt="Material Icons Badge">
+</a>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### Interactivity: 
 
-## Learn More
+<a href="https://www.npmjs.com/package/axios" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.axios&logo=axios&label=Axios&color=lightgray&style=for-the-badge" alt="Axios Badge">
+</a>
+<a href="https://www.npmjs.com/package/react-otp-input" style="text-decoration: none;" target="_blank">
+    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies%5B%22react-otp-input%22%5D&label=react%20otp%20input&color=darkgreen&style=for-the-badge" alt="React OTP Input Badge">
+</a>
 
-To learn more about Next.js, take a look at the following resources:
+<hr />
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Website &copy; 2024 Tyler J. Latshaw. |  Wordle&trade; 2023 The New York Times.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+All rights reserved.

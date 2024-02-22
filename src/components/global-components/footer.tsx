@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import SvgIcon from "@mui/icons-material/Home";
-import { footerSocialLinks, navigationLinks, supplementalLinks } from "../../lib/navigation-links";
+import { footerSocialLinks, navigationLinks, supplementalLinks } from "../../app/lib/navigation-links";
 
 export default function Footer() {
 
@@ -32,7 +32,7 @@ export default function Footer() {
     const copyright = <>
         <div className="w-full pt-6 text-md fade-in text-gray-400">
             <div className="text-center" id="copyright">
-                &copy; {new Date().getFullYear()} <a href="http://tylerlatshaw.com" target="_blank" className="hover:text-green-500">Tyler J. Latshaw</a>. All rights reserved.
+                Website &copy; {new Date().getFullYear()} <a href="http://tylerlatshaw.com" target="_blank" className="hover:text-green-500">Tyler J. Latshaw</a>. |  Wordle&trade; 2023 The New York Times.<br/>All rights reserved.
             </div>
         </div>
     </>;

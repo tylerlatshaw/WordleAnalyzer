@@ -10,6 +10,9 @@
 /*******************************/
 
 :root {
+    --w-green: #6AAA64;
+    --w-yellow: #C9B458;
+    --w-gray: #787C7E;
     --red-600: #dc2626;
     --green-600: #16a34a;
     --green-900: #14532d;
@@ -47,6 +50,83 @@ body {
     }
 }
 
+h2 {
+    /* mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* mt-12 */
+    margin-top: 3rem;
+
+    /* mb-6 */
+    margin-bottom: 1.5rem;
+
+    /* pb-1 */
+    padding-bottom: 0.25rem;
+
+    /* px-4 */
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    /* w-full */
+    width: fit-content;
+
+    /* font-semibold */
+    font-weight: 600;
+
+    /* text-center */
+    text-align: center;
+
+    /* underline */
+    text-decoration-line: underline;
+
+    /* decoration-yellow-500 */
+    text-decoration-color: var(--w-green);
+}
+
+/* screen width < md */
+@media (max-width: 768px) {
+    h1 {
+        /* text-4xl */
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+
+    h2 {
+        /* text-2xl */
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+        /* underline-offset-4 */
+        text-underline-offset: 4px;
+
+        /* decoration-4 */
+        text-decoration-thickness: 4px;
+    }
+}
+
+/* screen width > md */
+@media (min-width: 768px) {
+    h1 {
+        /* text between 4xl - 5xl */
+        font-size: 2.625rem;
+        line-height: 2.625rem;
+    }
+
+    h2 {
+        /* text-3xl */
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+
+        /* underline-offset-4 */
+        text-underline-offset: 4px;
+
+        /* decoration-[6px] */
+        text-decoration-thickness: 5px;
+    }
+}
+
+
 /*******************************/
 /*****
 /*****    UTILITIES 
@@ -59,6 +139,20 @@ body {
 
 div[data-lastpass-icon-root] {
     display: none
+}
+
+/* screen width < md */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* screen width > md */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
 }
 
 
@@ -122,4 +216,19 @@ input:-webkit-autofill:active {
 .otp-container input {
     width: 4rem;
     min-width: 4rem;
+}
+
+
+/*******************************/
+/*****
+/*****    PRIVACY POLICY 
+/*****
+/*******************************/
+
+.privacy-policy .privacy-policy-main a {
+    text-decoration: underline;
+}
+
+.privacy-policy .privacy-policy-main a:hover {
+    color: var(--green-600);
 }

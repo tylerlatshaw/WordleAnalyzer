@@ -18,6 +18,6 @@ export default function EmptyInput() {
         <div className="w-16 h-16 m-2 border-2 border-gray-400 rounded-sm">
             <div className="w-full h-full m-0 p-0"></div>
         </div>
-        <div className="w-16 h-16 mx-4 my-2"></div>
+        <div className="w-16 h-16 m-2"></div>
     </div>;
 }
