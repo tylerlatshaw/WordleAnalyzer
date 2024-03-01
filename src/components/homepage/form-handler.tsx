@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import OtpInput from "react-otp-input";
 import { Button } from "@mui/material";
+import OtpInput from "react-otp-input";
 import CheckIcon from "@mui/icons-material/Check";
 import { splitWord } from "../../utilities/word-processing";
 
@@ -69,7 +69,7 @@ export default function FormHandler(props: formHandlePropsType) {
     }
 
     function calculateWin() {
-        if (letterResponse.some(letter => letter.response === "incorrect" || letter.response === "misplaced")) { //Not a win yet
+        if (letterResponse.some(letter => letter.response === "incorrect" || letter.response === "misplaced")) { // Not a win yet
             if (props.wordCountState.wordCount < 6) {
                 props.messageState.setMessage("Please enter another word");
                 props.wordCountState.setWordCount(props.wordCountState.wordCount + 1);

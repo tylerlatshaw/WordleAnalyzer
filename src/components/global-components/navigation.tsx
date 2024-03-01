@@ -5,10 +5,8 @@ import { useState } from "react";
 import { navigationLinks } from "../../app/lib/navigation-links";
 
 import HomeIcon from "@mui/icons-material/Home";
-import WorkIcon from "@mui/icons-material/Work";
-import SchoolIcon from "@mui/icons-material/School";
-import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
-import EmailIcon from "@mui/icons-material/Email";
+import AbcIcon from "@mui/icons-material/Abc";
+import ArticleIcon from "@mui/icons-material/Article";
 import { SvgIcon, SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import Link from "next/link";
@@ -25,20 +23,12 @@ const mobileLinkIcons: iconLookupType[] = [
         icon: HomeIcon,
     },
     {
-        display: "Resume",
-        icon: WorkIcon,
+        display: "Letter Ranking",
+        icon: AbcIcon,
     },
     {
-        display: "Portfolio",
-        icon: SchoolIcon,
-    },
-    {
-        display: "Interests",
-        icon: LibraryMusicIcon,
-    },
-    {
-        display: "Contact Me",
-        icon: EmailIcon,
+        display: "Possible Words",
+        icon: ArticleIcon,
     }
 ];
 

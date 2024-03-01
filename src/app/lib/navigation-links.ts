@@ -7,18 +7,24 @@ import type { FooterSocialType } from "./type-library";
 export type navigationLinkType = {
     display: string,
     link: string,
-    filepath: string,
-    changeFrequency: "always" | "hourly" | "daily" | "weekly" | "monthly" | "yearly" | "never",
-    priority: number,
+    filepath: string
 }
 
 export const navigationLinks: navigationLinkType[] = [
     {
         display: "Home",
         link: "/",
-        filepath: "src/app/page.tsx",
-        changeFrequency: "monthly",
-        priority: 1.0,
+        filepath: "src/app/page.tsx"
+    },
+    {
+        display: "Letter Ranking",
+        link: "/letter-ranking",
+        filepath: "src/app/letter-ranking/page.tsx"
+    },
+    {
+        display: "Possible Words",
+        link: "/possible-words",
+        filepath: "src/app/possible-words/page.tsx"
     }
 ];
 
@@ -26,16 +32,12 @@ export const supplementalLinks: navigationLinkType[] = [
     {
         display: "Privacy Policy",
         link: "/privacy-policy",
-        filepath: "src/app/privacy-policy/page.tsx",
-        changeFrequency: "yearly",
-        priority: 0.1
+        filepath: "src/app/privacy-policy/page.tsx"
     },
     {
         display: "Sitemap",
         link: "/sitemap.xml",
-        filepath: "src/app/sitemap.xml",
-        changeFrequency: "yearly",
-        priority: 0.1,
+        filepath: "src/app/sitemap.xml"
     }
 ];
 
