@@ -1,18 +1,32 @@
 import { NextResponse } from "next/server";
-import { getPossibleWords } from "@/utilities/notion-client";
-import { PossibleWordResponseType, PossibleWordResultType } from "@/app/lib/notion-type-library";
+import { GetObjectCommand } from "@aws-sdk/client-s3";
+import Papa from "papaparse";
+import { WordType } from "@/app/lib/type-library";
 
 export async function GET() {
-    var start_cursor;
-    var has_more = true;
-    const sanitizedResults: PossibleWordResultType[] = [];
+    try {
+        const command = new GetObjectCommand({
+            Bucket: process.env.AWS_BUCKET_NAME!,
+            Key: process.env.AWS_DIRECTORY! + "wordle_possible_words.csv",
+        });
 
-    do {
-        const response = await getPossibleWords(start_cursor!) as unknown as PossibleWordResponseType;
-        sanitizedResults.push(...response.results);
+        const { Bucket, Key } = (command as any).input;
+        const url = `https://${Bucket}.s3.amazonaws.com/${Key}`;
 
-        response.has_more ? start_cursor = response.next_cursor : has_more = false;
-    } while (has_more);
+        const dataset: WordType[] = [];
 
-    return NextResponse.json(sanitizedResults);
+        await fetch(url)
+            .then(response => response.text())
+            .then(responseText => {
+                var data = Papa.parse(responseText, {
+                    header: true
+                });
+                dataset.push(data.data as unknown as WordType);
+            });
+
+        return NextResponse.json(dataset[0]);
+    } catch (error) {
+        console.error("Error fetching data from S3: ", error);
+        return new NextResponse("Error fetching data from S3");
+    }
 }

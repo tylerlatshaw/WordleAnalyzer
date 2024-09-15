@@ -40,3 +40,9 @@ export type formHandlePropsType = {
     wordCountState: wordCountParamType,
     gamePlayState: gamePlayState
 }
+
+export type WordType = {
+    WordleWordId: number,
+    Word: string,
+    Score: number
+}

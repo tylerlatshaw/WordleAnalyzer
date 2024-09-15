@@ -9,7 +9,7 @@ export const notionClient = new Client({
 export const getLetterRankings = async (start_cursor: string | undefined) => {
 
     const response = notionClient.databases.query({
-        database_id: process.env.NOTION_DB_LETTERS!,
+        database_id: process.env.NOTION_DB_LETTER_RANKING!,
         sorts: [
             {
                 property: "Name",
@@ -44,8 +44,8 @@ export const getPossibleWords = async (start_cursor: string | undefined) => {
         database_id: process.env.NOTION_DB_POSSIBLE_WORDS!,
         sorts: [
             {
-                property: "Word",
-                direction: "ascending"
+                property: "Score",
+                direction: "descending"
             }
         ],
         start_cursor: start_cursor!

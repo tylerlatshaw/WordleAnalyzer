@@ -1,6 +1,6 @@
 import { LetterResultType } from "@/app/lib/notion-type-library";
 
-export default function Page() {
+export default function RankingTable() {
 
     const tdStyle = "px-2 py-1 border border-gray-500 text-center";
 
@@ -31,7 +31,7 @@ export default function Page() {
     }
 
     return <>
-        <table>
+        <table className="mx-auto w-full md:w-3/5">
             <thead className="bg-gray-300">
                 <tr className="bg-gray-400">
                     <th rowSpan={2} className={tdStyle + " font-semibold"}>Letter</th>

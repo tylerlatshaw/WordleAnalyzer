@@ -25,9 +25,6 @@
 
 #### Interactivity: 
 
-<a href="https://www.npmjs.com/package/axios" style="text-decoration: none;" target="_blank">
-    <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies.axios&logo=axios&label=Axios&color=lightgray&style=for-the-badge" alt="Axios Badge">
-</a>
 <a href="https://www.npmjs.com/package/react-otp-input" style="text-decoration: none;" target="_blank">
     <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Ftylerlatshaw%2FWordleAnalyzer%2Fraw%2Fmain%2Fpackage.json&query=%24.dependencies%5B%22react-otp-input%22%5D&label=react%20otp%20input&color=darkgreen&style=for-the-badge" alt="React OTP Input Badge">
 </a>
